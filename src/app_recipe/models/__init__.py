@@ -5,3 +5,4 @@ from .recipe import Recipe
 from .recipe_ingredient import RecipeIngredient
 from .step import Step
 from .review import Review
+from .favorite import Favorite

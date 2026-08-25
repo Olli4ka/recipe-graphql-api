@@ -1,7 +1,22 @@
 from django.contrib import admin
 from django.utils.html import format_html
 
-from ..models import Recipe
+from ..models import (
+    Recipe,
+    RecipeIngredient,
+    Step,
+)
+
+
+
+class RecipeIngredientInline(admin.TabularInline):
+    model = RecipeIngredient
+    extra = 1
+
+
+class StepInline(admin.TabularInline):
+    model = Step
+    extra = 1
 
 
 
@@ -62,3 +77,8 @@ class RecipeAdmin(admin.ModelAdmin):
                 obj.image.url,
             )
         return "—"
+
+    inlines = (
+        RecipeIngredientInline,
+        StepInline,
+    )

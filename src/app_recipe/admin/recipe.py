@@ -22,19 +22,34 @@ class StepInline(admin.TabularInline):
 
 @admin.register(Recipe)
 class RecipeAdmin(admin.ModelAdmin):
+    fields = (
+        "title",
+        "image_preview",
+        "image",
+        "slug",
+        "description",
+        "cooking_time",
+        "category",
+        "author",
+        "created_at",
+        "updated_at",
+    )
+
     list_display = (
         "id",
+        "image_preview",
         "title",
         "slug",
         "category",
         "author",
         "cooking_time",
-        "image_preview",
+
     )
 
     list_display_links = (
         "id",
         "title",
+        "image_preview",
     )
 
     search_fields = (
@@ -58,6 +73,7 @@ class RecipeAdmin(admin.ModelAdmin):
     )
 
     readonly_fields = (
+        "image_preview",
         "created_at",
         "updated_at",
     )

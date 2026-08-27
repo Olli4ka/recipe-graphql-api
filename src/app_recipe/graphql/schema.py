@@ -1,11 +1,10 @@
 import graphene
 
-
-class Query(graphene.ObjectType):
-    hello = graphene.String()
-
-    def resolve_hello(self, info):
-        return "Hello, Recipe GraphQL API!"
+from .mutations import Mutation
+from .queries import Query
 
 
-schema = graphene.Schema(query=Query)
+schema = graphene.Schema(
+    query=Query,
+    mutation=Mutation,
+)

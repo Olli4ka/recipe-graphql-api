@@ -139,3 +139,7 @@ MAILERS = {
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR.parent / "media"
+
+GRAPHENE = {
+    "SCHEMA": "app_recipe.graphql.schema.schema",
+}

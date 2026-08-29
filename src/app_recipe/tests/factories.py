@@ -11,7 +11,7 @@ from ..models import (
     RecipeIngredient,
     Review,
     Step,
-    User
+    User,
 )
 
 

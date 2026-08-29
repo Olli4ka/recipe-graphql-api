@@ -3,12 +3,24 @@ import graphql_jwt
 from graphql import GraphQLError
 
 from ..models import Favorite, Recipe, Review
-from .inputs import (DeleteReviewInput, FavoriteInput, RecipeInput,
-                     ReviewInput, UpdateRecipeInput, UpdateReviewInput)
+from .inputs import (
+    DeleteReviewInput,
+    FavoriteInput,
+    RecipeInput,
+    ReviewInput,
+    UpdateRecipeInput,
+    UpdateReviewInput,
+)
 from .types import FavoriteType, RecipeType, ReviewType
-from .utils import (check_recipe_owner, get_category_by_slug, get_current_user,
-                    get_favorite, get_recipe_by_slug, get_review,
-                    validate_rating)
+from .utils import (
+    check_recipe_owner,
+    get_category_by_slug,
+    get_current_user,
+    get_favorite,
+    get_recipe_by_slug,
+    get_review,
+    validate_rating,
+)
 
 
 class CreateRecipe(graphene.Mutation):

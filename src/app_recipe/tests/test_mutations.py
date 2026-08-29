@@ -1,12 +1,7 @@
 import pytest
 
 from ..models import Favorite, Recipe, Review
-from .factories import (
-    CategoryFactory,
-    FavoriteFactory,
-    RecipeFactory,
-    ReviewFactory
-)
+from .factories import CategoryFactory, FavoriteFactory, RecipeFactory, ReviewFactory
 
 
 # ==========================================================

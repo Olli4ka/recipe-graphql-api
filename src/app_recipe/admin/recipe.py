@@ -1,12 +1,7 @@
 from django.contrib import admin
 from django.utils.html import format_html
 
-from ..models import (
-    Recipe,
-    RecipeIngredient,
-    Step,
-)
-
+from ..models import Recipe, RecipeIngredient, Step
 
 
 class RecipeIngredientInline(admin.TabularInline):
@@ -17,7 +12,6 @@ class RecipeIngredientInline(admin.TabularInline):
 class StepInline(admin.TabularInline):
     model = Step
     extra = 1
-
 
 
 @admin.register(Recipe)
@@ -43,7 +37,6 @@ class RecipeAdmin(admin.ModelAdmin):
         "category",
         "author",
         "cooking_time",
-
     )
 
     list_display_links = (

@@ -7,7 +7,7 @@ from .factories import (
     RecipeFactory,
     RecipeIngredientFactory,
     ReviewFactory,
-    StepFactory
+    StepFactory,
 )
 
 

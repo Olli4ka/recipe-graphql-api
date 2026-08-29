@@ -3,10 +3,13 @@ from django.db.models import Prefetch
 
 from ..models import Category, Favorite, Ingredient, Recipe, Review, User
 from .enums import RecipeOrderEnum
-from .types import (CategoryType, IngredientType, RecipeListType, RecipeType,
-                    UserType)
-from .utils import (get_category_by_slug, get_ingredient_by_name,
-                    get_recipe_by_slug, get_user_by_username)
+from .types import CategoryType, IngredientType, RecipeListType, RecipeType, UserType
+from .utils import (
+    get_category_by_slug,
+    get_ingredient_by_name,
+    get_recipe_by_slug,
+    get_user_by_username,
+)
 
 
 class Query(graphene.ObjectType):

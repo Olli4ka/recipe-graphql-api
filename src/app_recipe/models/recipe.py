@@ -11,14 +11,8 @@ class Recipe(models.Model):
         blank=True,
     )
     description = models.TextField()
-    image = models.ImageField(
-        upload_to="recipes/",
-        blank=True,
-        null=True
-    )
-    cooking_time = models.PositiveIntegerField(
-        help_text="Cooking time in minutes"
-    )
+    image = models.ImageField(upload_to="recipes/", blank=True, null=True)
+    cooking_time = models.PositiveIntegerField(help_text="Cooking time in minutes")
     ingredients = models.ManyToManyField(
         "Ingredient",
         through="RecipeIngredient",

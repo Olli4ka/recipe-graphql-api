@@ -1,12 +1,26 @@
 import pytest
 from django.db.utils import IntegrityError
 
-from ..models import (Category, Favorite, Ingredient, IngredientUnit,
-                               Recipe, RecipeIngredient, Review, Step)
-from .factories import (CategoryFactory, FavoriteFactory,
-                                        IngredientFactory, RecipeFactory,
-                                        RecipeIngredientFactory, ReviewFactory,
-                                        StepFactory, UserFactory)
+from ..models import (
+    Category,
+    Favorite,
+    Ingredient,
+    IngredientUnit,
+    Recipe,
+    RecipeIngredient,
+    Review,
+    Step,
+)
+from .factories import (
+    CategoryFactory,
+    FavoriteFactory,
+    IngredientFactory,
+    RecipeFactory,
+    RecipeIngredientFactory,
+    ReviewFactory,
+    StepFactory,
+    UserFactory,
+)
 
 
 # ==========================================================

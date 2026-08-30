@@ -21,6 +21,7 @@ htmlcov/
 
 # Environment files
 .env
+.env.docker
 
 # OS files
 .DS_Store

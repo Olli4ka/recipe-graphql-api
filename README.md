@@ -36,6 +36,8 @@ setup with Gunicorn and Nginx.
 ![Test Coverage](https://img.shields.io/badge/coverage-97%25-brightgreen)
 ![Tests](https://img.shields.io/badge/tests-62%20passed-brightgreen)
 
+![Tests](https://github.com/Olli4ka/recipe-graphql-api/actions/workflows/ci.yml/badge.svg)
+
 ---
 
 ## Features
@@ -868,6 +870,20 @@ Current test suite:
 62 passed
 97% coverage
 ```
+
+---
+
+## Continuous Integration
+
+GitHub Actions is configured to automatically run the test suite on every push and pull request.
+
+The CI workflow:
+- sets up Python 3.12;
+- starts a PostgreSQL 17 service;
+- installs project dependencies;
+- runs the test suite with pytest.
+
+The workflow must pass before changes are merged into `main`.
 
 ---
 
